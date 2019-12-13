@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.2.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.beatshadow</groupId>
+	<artifactId>beatshadow-cloud</artifactId>
+	<packaging>pom</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>BeatShadow Cloud</name>
+	<description>Demo project for Spring Boot</description>
+
+	<scm>
+		<url>https://github.com/gnehcgnaw/beatshadow-cloud</url>
+		<connection>
+			scm:git:git://github.com/gnehcgnaw/beatshadow-cloud/beatshadow-cloud.git
+		</connection>
+		<developerConnection>
+			scm:git:ssh://git@github.com:gnehcgnaw/beatshadow-cloud.git
+		</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<shardingsphere.version>4.0.0-RC2</shardingsphere.version>
+	</properties>
+	<modules>
+		<module>beatshadow-cloud-sharding-jdbc-example</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.shardingsphere</groupId>
+				<artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+				<version>${shardingsphere.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>2.1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>3.5.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP</artifactId>
+				<version>3.4.1</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+</project>
