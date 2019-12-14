@@ -14,4 +14,6 @@ public interface TbOrderMapper {
     int insert(@Param("record") TbOrder record);
 
     List<TbOrder> selectListByOrderIdList(List<Long> list);
+
+    List<TbOrder> selectListByOrderIdListAndUserId(@Param("orderIdList") List<Long> orderIdList ,@Param("userId") Long userId);
 }

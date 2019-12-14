@@ -12,9 +12,16 @@
         <result column="user_id" property="userId"/>
     </resultMap>-->
     <select id="selectListByOrderIdList" resultType="com.beashadow.shardingjdbcexample.domain.TbOrder">
-        select * from t_order where order_id in
+        select * from t_order where order_id  in
         <foreach collection='list' open="(" separator="," close=")" item="item" index="index">
             #{item}
         </foreach>
+    </select>
+    <select id="selectListByOrderIdListAndUserId" resultType="com.beashadow.shardingjdbcexample.domain.TbOrder">
+        select * from t_order where order_id in
+        <foreach collection="orderIdList" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        and user_id = #{userId}
     </select>
 </mapper>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beashadow.shardingjdbcexample.mapper.TbDictMapper">
+  <insert id="insert" parameterType="com.beashadow.shardingjdbcexample.domain.TbDict">
+    <!--@mbg.generated-->
+    insert into t_dict (`type`, code,
+      `value`)
+    values (#{type,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR},
+      #{value,jdbcType=VARCHAR})
+  </insert>
+</mapper>
