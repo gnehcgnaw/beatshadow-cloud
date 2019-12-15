@@ -6,7 +6,6 @@
 		<groupId>com.beatshadow</groupId>
 		<artifactId>beatshadow-cloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.beashadow</groupId>
 	<artifactId>beatshadow-cloud-sharding-jdbc-example</artifactId>
