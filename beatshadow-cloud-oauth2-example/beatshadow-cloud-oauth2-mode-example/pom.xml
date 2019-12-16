@@ -18,5 +18,8 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
+    <modules>
+        <module>beatshadow-cloud-order-service-example</module>
+        <module>beatshadow-cloud-uaa-example</module>
+    </modules>
 </project>
