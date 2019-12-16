@@ -17,6 +17,7 @@
 	<modules>
 		<module>beatshadow-cloud-session-mode-example</module>
 		<module>beatshadow-cloud-spring-security-mode-example</module>
+		<module>beatshadow-cloud-oauth2-mode-example</module>
 	</modules>
 
 </project>
