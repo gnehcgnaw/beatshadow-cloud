@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class OrderServiceExampleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BeatshadowCloudOrderServiceExampleApplication.class, args);
+		SpringApplication.run(OrderServiceExampleApplication.class, args);
 	}
 
 }
