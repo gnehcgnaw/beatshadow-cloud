@@ -34,6 +34,7 @@
 	<modules>
 		<module>beatshadow-cloud-sharding-jdbc-example</module>
 		<module>beatshadow-cloud-oauth2-example</module>
+		<module>beatshadow-cloud-jvm-learning</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
