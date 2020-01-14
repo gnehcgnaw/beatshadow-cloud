@@ -41,6 +41,7 @@
 		<module>beatshadow-cloud-sharding-jdbc-example</module>
 		<module>beatshadow-cloud-oauth2-example</module>
 		<module>beatshadow-cloud-akka-learning</module>
+		<module>beatshadow-cloud-distributed-transaction-examples</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>

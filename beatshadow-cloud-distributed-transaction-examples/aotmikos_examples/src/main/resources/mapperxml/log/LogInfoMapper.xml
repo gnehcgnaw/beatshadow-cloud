@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beatshadow.aotmikosexamples.mapper.log.LogInfoMapper">
+  <resultMap id="BaseResultMap" type="com.beatshadow.aotmikosexamples.domain.LogInfo">
+    <!--@mbg.generated-->
+    <!--@Table log_info-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, createTime, content
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from log_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from log_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.beatshadow.aotmikosexamples.domain.LogInfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into log_info (createTime, content)
+    values (#{createTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.beatshadow.aotmikosexamples.domain.LogInfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into log_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="createTime != null">
+        createTime,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.beatshadow.aotmikosexamples.domain.LogInfo">
+    <!--@mbg.generated-->
+    update log_info
+    <set>
+      <if test="createTime != null">
+        createTime = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.beatshadow.aotmikosexamples.domain.LogInfo">
+    <!--@mbg.generated-->
+    update log_info
+    set createTime = #{createTime,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

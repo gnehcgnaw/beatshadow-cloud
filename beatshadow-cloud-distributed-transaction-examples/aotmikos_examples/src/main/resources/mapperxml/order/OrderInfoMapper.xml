@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beatshadow.aotmikosexamples.mapper.order.OrderInfoMapper">
+  <resultMap id="BaseResultMap" type="com.beatshadow.aotmikosexamples.domain.OrderInfo">
+    <!--@mbg.generated-->
+    <!--@Table order_info-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="money" jdbcType="DOUBLE" property="money" />
+    <result column="userid" jdbcType="VARCHAR" property="userId" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, money, userid, address, createTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from order_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from order_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.beatshadow.aotmikosexamples.domain.OrderInfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into order_info (money, userid, address, 
+      createTime)
+    values (#{money,jdbcType=DOUBLE}, #{userId,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.beatshadow.aotmikosexamples.domain.OrderInfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into order_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="money != null">
+        money,
+      </if>
+      <if test="userId != null">
+        userid,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="createTime != null">
+        createTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="money != null">
+        #{money,jdbcType=DOUBLE},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.beatshadow.aotmikosexamples.domain.OrderInfo">
+    <!--@mbg.generated-->
+    update order_info
+    <set>
+      <if test="money != null">
+        money = #{money,jdbcType=DOUBLE},
+      </if>
+      <if test="userId != null">
+        userid = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        createTime = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.beatshadow.aotmikosexamples.domain.OrderInfo">
+    <!--@mbg.generated-->
+    update order_info
+    set money = #{money,jdbcType=DOUBLE},
+      userid = #{userId,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      createTime = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
